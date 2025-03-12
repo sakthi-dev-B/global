@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Logo Slider</title>
+    <style>
+        .slider-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            width: max-content;
+            animation: scroll 10s linear infinite;
+        }
+        .slide {
+            flex: 0 0 auto;
+            margin-right: 20px;
+        }
+        .slide img {
+            width: 200px;
+            height: auto;
+        }
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="./images/4.jpg" alt="Company 1"></div>
+            <div class="slide"><img src="./images/1.jpg" alt="Company 2"></div>
+            <div class="slide"><img src="./images/2.jpg" alt="Company 3"></div>
+            <div class="slide"><img src="./images/3.jpg" alt="Company 4"></div>
+            <div class="slide"><img src="./images/5.jpg" alt="Company 5"></div>
+            <div class="slide"><img src="./images/6.jpg" alt="Company 6"></div>
+            <div class="slide"><img src="./images/7.jpg" alt="Company 7"></div>
+            <div class="slide"><img src="./images/8.jpg" alt="Company 8"></div>
+            <div class="slide"><img src="./images/9.jpg" alt="Company 9"></div>
+            <div class="slide"><img src="./images/10.jpg" alt="Company 10"></div>
+            <div class="slide"><img src="./images/11.jpg" alt="Company 11"></div>
+            <div class="slide"><img src="./images/12.jpg" alt="Company 12"></div>
+            <div class="slide"><img src="./images/13.jpg" alt="Company 13"></div>
+            <div class="slide"><img src="./images/14.jpg" alt="Company 14"></div>
+            <div class="slide"><img src="./images/15.jpg" alt="Company 15"></div>
+            <div class="slide"><img src="./images/16.jpg" alt="Company 16"></div>
+            <div class="slide"><img src="./images/17.jpg" alt="Company 17"></div>
+            <div class="slide"><img src="./images/18.jpg" alt="Company 18"></div>
+            <div class="slide"><img src="./images/19.jpg" alt="Company 19"></div>
+            <div class="slide"><img src="./images/21.jpg" alt="Company 21"></div>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        function moveSlide() {
+            const slides = document.querySelectorAll(".slide");
+            index = (index + 1) % slides.length;
+            document.querySelector(".slider").style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(moveSlide, 1000);
+    </script>
+</body>
+
+</html>

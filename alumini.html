@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ALUMNI-GITIAN - GIT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .top-bar {
+            color: rgb(252, 250, 250);
+            background-color: #1b186f;
+
+
+            padding: 10px 5px;
+
+            font-size: 15px;
+
+        }
+
+
+        .container-fluid {
+            background-color: #ffffff;
+            color: #000;
+            font-weight: 700;
+            font-size: 15px;
+
+        }
+
+        .dropdown-menu {
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        .git_header {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(254, 253, 253);
+            margin: 0 10px;
+
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 100px;
+        }
+
+        .logo img {
+            height: 100px;
+            width: 200px;
+
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 16px;
+        }
+
+        .gmail {
+            height: 15px;
+            width: 15px;
+
+        }
+
+        .small_line:not(:last-child) {
+            border-left: 3px solid;
+            border-right: 3px solid;
+            padding: 0 16px;
+        }
+
+        .phone {
+            height: 15px;
+            width: 15px;
+        }
+
+        .clock {
+            height: 15px;
+            width: 15px;
+        }
+
+        .twitter {
+            width: 25px;
+            height: 25px;
+            float: inline-end;
+
+            margin: 0 20px 10px 10px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .instagram {
+            width: 25px;
+            height: 25px;
+            float: inline-end;
+            margin: 0 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .youtube {
+            width: 30px;
+            height: 25px;
+            float: inline-end;
+            margin: 0 13px;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        .facebook {
+            width: 25px;
+            height: 25px;
+            background-color: rgb(255, 255, 255);
+            float: inline-end;
+            border-radius: 20px;
+
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 50px;
+            margin-top: 70px;
+
+        }
+
+        .footer h2 {
+            color: #91bff0;
+            font-size: 20px;
+
+
+        }
+
+        .footer a {
+            color: rgb(255, 253, 253);
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        .footer li {
+            font-size: 15px;
+            text-decoration: none;
+
+            margin: 20px 0 0;
+        }
+
+        .footer p {
+            font-size: 16px;
+        }
+
+
+        footer a:hover {
+            color: #ba4747;
+        }
+
+        .footer svg {
+            background-color: white;
+            width: 60px;
+            height: 50px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .footer_logo {
+            margin-left: 500px;
+            padding-top: 80px;
+        }
+
+        .nav-tabs {
+            flex-direction: column;
+            background-color: rgb(232, 74, 74);
+            font-size: 25px;
+            margin: 100px 70px 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .nav-tabs a {
+            color: #000;
+            font-size: 15px;
+
+        }
+
+        .toppers h1 {
+            color: #0903b3;
+        }
+
+        .tab-pane h1
+        {
+            color: #0903b3;
+
+        }
+        .tab-pane h3{
+            color: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        th {
+            background-color: #002D62;
+            color: white;
+        }
+        tr:nth-child(odd) td {
+            background-color: #F8D7DA;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="top-bar">
+        TNEA CODE: 1523
+        <a href="https://www.facebook.com/GLOBALIET/">
+
+            <svg class="facebook" xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512">
+                <path fill="#5497c9"
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+
+            </svg>
+        </a>
+        <a href="https://twitter.com/GLOBALIET">
+
+            <svg class="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/giet_officials/">
+            <svg class="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#9a3c3c"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+        </a>
+        <a href="https://www.youtube.com/@HIGLOBAL-h9n">
+            <svg class="youtube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="#de4a68"
+                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+            </svg>
+        </a>
+    </div>
+    <div class="git_header">
+        <div class="logo">
+            <img src="./images/logo-redesign-2x-300x77.png" alt="Global Institute Logo">
+        </div>
+
+        <div class="contact-info">
+            <svg class="gmail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#902727"
+                    d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM218 271.7L64.2 172.4C66 156.4 79.5 144 96 144l256 0c16.5 0 30 12.4 31.8 28.4L230 271.7c-1.8 1.2-3.9 1.8-6 1.8s-4.2-.6-6-1.8zm29.4 26.9L384 210.4 384 336c0 17.7-14.3 32-32 32L96 368c-17.7 0-32-14.3-32-32l0-125.6 136.6 88.2c7 4.5 15.1 6.9 23.4 6.9s16.4-2.4 23.4-6.9z" />
+            </svg>
+            <span><i class="fas fa-envelope"></i> info@getedu.in </span>
+            <div class="small_line">
+                <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">!Font Awesome Free 6.7.2 by
+                    @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025
+                    Fonticons, Inc.-->
+                    <path fill="#a72d25"
+                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                </svg>
+                <span><i class="phone"></i> 094431 32622</span>
+            </div>
+            <svg class="clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">!Font Awesome Free 6.7.2 by
+                @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025
+                Fonticons, Inc.-->
+                <path fill="#af6546"
+                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+
+            </svg>
+
+
+            <span><i class="clock"></i> Mon - Sat : 09.15AM - 04.15PM</span>
+        </div>
+
+    </div>
+    <hr>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        ABOUT
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">About the College</a></li>
+                        <li><a class="dropdown-item" href="#">Admministration</a></li>
+                        <li><a class="dropdown-item" href="#">Principal</a></li>
+                        <li><a class="dropdown-item" href="#">College Rules</a></li>
+                        <li><a class="dropdown-item" href="#">Committees and Cells</a></li>
+                        <li><a class="dropdown-item" href="#">Memorandum of Understanding</a></li>
+                        <li><a class="dropdown-item" href="#">Policies and procedures</a></li>
+                        <li><a class="dropdown-item" href="#">AICTE Approval</a></li>
+                        <li><a class="dropdown-item" href="#">Anna University</a></li>
+
+
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        ADMISSIONS
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Programs Offered</a></li>
+                        <li><a class="dropdown-item" href="#">Eligibility</a></li>
+                        <li><a class="dropdown-item" href="#">Admission Form</a></li>
+
+
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        COURSES
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#"></a></li>
+                        <li><a class="dropdown-item" href="#">B.E-Computer Science and Engineering</a></li>
+
+                        <li><a class="dropdown-item" href="#">B.E-Electronics and Communication Engineering</a></li>
+                        <li><a class="dropdown-item" href="#">B.E-Electrical and Electronics Engineering</a></li>
+                        <li><a class="dropdown-item" href="#">B.E-Mechanical Engineering</a></li>
+                        <li><a class="dropdown-item" href="#">B.E-Civil Engineering</a></li>
+                        <li><a class="dropdown-item" href="#">B.E-Automobile Departmment</a></li>
+                        <li><a class="dropdown-item" href="#">B.Tech-Information Technology</a></li>
+                        <li><a class="dropdown-item" href="#">B.Tech-Artificial Intelligence and Data Science</a></li>
+                        <li><a class="dropdown-item" href="#">B.Tech-Artificial Intelligence and Machine Learning</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        GRIEVANCE REDRESSAL
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Policy</a></li>
+                        <li><a class="dropdown-item" href="#">About GIT</a></li>
+
+                        <li><a class="dropdown-item" href="#">Objectives</a></li>
+                        <li><a class="dropdown-item" href="#">Mechanism</a></li>
+                        <li><a class="dropdown-item" href="#">members</a></li>
+                        <li><a class="dropdown-item" href="#">Responsibility</a></li>
+                        <li><a class="dropdown-item" href="#">Contact us</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        ACADEMICS
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Curricullam and Syllabus</a></li>
+                        <li><a class="dropdown-item" href="#">Regulation</a></li>
+
+                        <li><a class="dropdown-item" href="#">Scholarship</a></li>
+                        <li><a class="dropdown-item" href="#">Academic Calendar</a></li>
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        PLACEMENT
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Placement</a></li>
+                        <li><a class="dropdown-item" href="#">Placement Training</a></li>
+
+                        <li><a class="dropdown-item" href="#">Placement Records</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        ALUMNI-GITIAN
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Vision and Mission</a></li>
+                        <li><a class="dropdown-item" href="#">Principal Message</a></li>
+                        <li><a class="dropdown-item" href="#">President Message</a></li>
+                        <li><a class="dropdown-item" href="#">Office Bearers(2025-26)</a></li>
+                        <li><a class="dropdown-item" href="#">Duties of the Office Bearers</a></li>
+                        <li><a class="dropdown-item" href="#">Alummni Association Certificate</a></li>
+                        <li><a class="dropdown-item" href="#">Alumni commmitte Members</a></li>
+
+
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        IIC
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Institution's Innovation Council</a></li>
+                        <li><a class="dropdown-item" href="#">In-House Project Cell</a></li>
+
+                        <li><a class="dropdown-item" href="#">Intellectual Property Rights Cell</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        FACILITIES
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Administration services</a></li>
+                        <li><a class="dropdown-item" href="#">Canteen</a></li>
+
+                        <li><a class="dropdown-item" href="#">Green Capus</a></li>
+                        <li><a class="dropdown-item" href="#">Health Care</a></li>
+                        <li><a class="dropdown-item" href="#">Hostel</a></li>
+                        <li><a class="dropdown-item" href="#">IT Infrastructure</a></li>
+                        <li><a class="dropdown-item" href="#">Library</a></li>
+                        <li><a class="dropdown-item" href="#">Maintenance</a></li>
+                        <li><a class="dropdown-item" href="#">Security</a></li>
+                        <li><a class="dropdown-item" href="#">Transport</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        FEEDBACK
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Students</a></li>
+                        <li><a class="dropdown-item" href="#">Parents</a></li>
+
+                        <li><a class="dropdown-item" href="#">Faculty</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+
+        </div>
+    </nav>
+
+    <img src="./images/students_git.png" alt="students in git" width="1550">
+
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Vision and Mission</a>
+                </li>
+                <li><a data-toggle="tab" href="#menu1">Principal Message</a></li>
+                <li><a data-toggle="tab" href="#menu2">Alumni Association President Message</a></li>
+
+                <li><a data-toggle="tab" href="#menu3">Office Bearers</a></li>
+                <li><a data-toggle="tab" href="#menu4">Duties of the Office Bearers</a></li>
+                
+
+
+            </ul>
+        </div>
+        <div class="col-md-8">
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h1>
+
+                        Vision and Mission
+
+                    </h1>
+                    <h3>Vision</h3>
+                    <p>
+
+                        To be recognized as a value-adding entity, creating an everlasting bonding between the alumni,
+                        students, industry, and Global Institute of Engineering and Technology.
+
+                    </p>
+                    <h3>Mission</h3>
+                    <p>GIET Alumni Association will strive to achieve its vision by:</p>
+                    <ul>
+                        <li>
+                            Helping students with industry visits & internship opportunities </li>
+                        <li>
+                            Providing technical mentorship for students’ projects </li>
+                        <li>
+                            Connecting GIET with companies to strengthen industry collaboration </li>
+                        <li>Volunteering to conduct lectures/workshops/mock interviews</li>
+                        <li>
+                            Volunteering to be a jury panel member for contents </li>
+                        <li>Playing the role of Visiting Faculty/Member of Board Studies/IQAC Cell</li>
+                        <li>Providing scholarship to deserving students of GIET</li>
+
+                        <li>Sponsoring infrastructure, prizes, and awards</li>
+                    </ul>
+                    <img src="./images/alumni.jpg" alt="Alummni GITian">
+
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <h1>
+                        Principal's Message
+                        </h1>
+                        <img src="./images/principal_message.jpg" alt="principal Message">
+                        <strong>Dear Alumni</strong>
+                        <p>My heart always brims with a lot of pride and joy, whenever I see my students succeeding and progressing in life. You are the one who has been providing a form and shape to all my dreams. Your success both in career and life has added a lot of credibility to Global Institute  of Engineering and Technology claims of a great value system on which this institution was built. Each one of you in your own way has brought pride to your institution.</p>
+                        <p>You are well aware that many like your faculty, industry leaders, motivational speakers, your parents have played a role in shaping up your academic and professional profile. Now the time has come for you as an alumnus of this institution to play a role in shaping up the current and future students of your institution. You are welcome to contribute to the betterment of  academic and professional pursuits in whatever the way you think you can. I am sure that the best and effective among the Alumni Associations of Engineering Colleges.</p>
+
+                    <p>Praying the Almighty for your prosperity and growth</p>
+                    <strong>Dr.V.NATARAJAN</strong>
+                    <strong>Principal, GIT</strong>
+
+
+
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <h1>Alumni Association</h1>
+                    <strong>Dear GITians,</strong>
+
+                    
+                    <p>I am delighted to reach out to you through the website of the Global Institute  of Engineering and Technology Alumni Association.</p>
+                    <p>Our alumni are spread out across the world, holding positions of eminence, playing an important role in building the credibility of our College, and have contributed immensely to the growth of our college. GIT on its part is keen to strengthen the bonds with its alumni. Your active participation and support in the activities of the Alumni Association will help us work together to take forward in the years to come. The Alumni website is just a small step to bringing the alumni closer to their past. I would like to appeal to you all to partake in the activities of the Alumni Association, as I am sure that we all can play a significant role in institution-building. Any suggestions for better functioning of the Alumni Association are heartily welcomed.</p>
+                    <p>Thank you all in advance for your support as we build Bigger Circles, Tighter Connections, Greater Engagement.</p>
+                    
+                    <p>Warm regards and best wishes to one and all…</p>
+                    <strong>Mrs.J.S.SONIGA</strong>
+                    <strong>President</strong>
+                    <strong>Global Institute  of Engineering and Technology</strong>
+                    <h3>Response</h3>
+                    <p>The Global Institute of Engineering and Technology Alumni Association (GITAA) was registered under the Tamil Nadu Societies Registration Act, 1975(Tamil Nadu Act 27 of 1975) in the year 2019 vide Sl.No. SRG/Ranipet/20/2019 with the Office of the Registrar of Societies, Ranipet., Tamil Nadu.</p>
+                    <p>The college fosters a close rapport with its alumni and it brings in turn a very advantageous link with industries and doyens in the society.</p>
+                    <p>The GITAA is a platform through which the alumni get in touch with their alma mater, where they grew up and flew off from. The interaction through the alumni is aimed at bridging the gap between college and career and reconnecting, reminiscing, revisiting the rich memories,  strengthening the bond, and savouring the rich experiences gained over the years.</p>
+                    <h3>
+                        Memorandum Of Association
+                        </h3>
+                        <p>The Name of the Association shall be “GIT Alumni Association Network” (Global Institute of Engineering and Technology)</p>
+                        <p>OBJECTIVES</p>
+                        <p>To provide a vibrant forum that promotes interaction and networking among alumni of the institute.</p>
+                        <p>To facilitate the association of alumni with their Alma Mater</p>
+                        <p>To contribute to the Institute’s vision of being recognized among the world’s leading Institutions in academics, research, outreach and innovations</p>
+                        <p>To promote best practices in different areas of science, technology, humanities and social sciences for the benefit of society, especially weaker sections</p>
+                        <p>To assist deserving students from the Institute and Society financially and otherwise</p>
+                        <p>Strengthening the ties between former students of the Institution</p>
+                        <p>Bring the old students of the Institute, under one forum for the exchange of experience, dissemination of knowledge and talents amongst its members and students and also for the furtherance of fellowship, and advancement of scientific knowledge in general of the members of the Association and Country.</p>
+                        <p>To create and establish Alumni endowments for granting scholarships, prizes and medals to the students showing high proficiency in their studies and honour former students.</p>
+                        <p>Membership is optional and not compulsory.</p>
+                        <p>The Alumni will act as per the provisions of Tamilnadu Society Registration Act, 1975 and rules 1978.The President will be the authorized official for all the actions taken under the court of Law on behalf of the association.</p>
+
+                </div>
+
+                <div id="menu3" class="tab-pane fade">
+
+                    <h1>Office Bearers(2017-22)</h1>
+                    <table>
+                        <tr>
+                            <th>S.no</th>
+                            <th>NAME</th>
+                            <th>DESIGNATION IN THE SOCIETY</th>
+                        </tr>
+                        <tr><td>1</td><td>Mrs. Hema Prasad</td><td>Chief Patron</td></tr>
+                        <tr><td>2</td><td>Dr. Suhas Vedula</td><td>Patron</td></tr>
+                        <tr><td>3</td><td>Dr. V. Natarajan</td><td>Patron</td></tr>
+                        <tr><td>4</td><td>Mrs. J. S. Soniga</td><td>President</td></tr>
+                        <tr><td>5</td><td>Mrs. S. Madhumathi</td><td>Vice President</td></tr>
+                        <tr><td>6</td><td>Mr. P. Rajesh</td><td>Secretary</td></tr>
+                        <tr><td>7</td><td>Mr. S. Vigneshkumar</td><td>Joint Secretary</td></tr>
+                        <tr><td>8</td><td>Ms. M. Ishwarya</td><td>Content</td></tr>
+                        <tr><td>9</td><td>Mr. L. Yokesh</td><td>Executive Member</td></tr>
+                        <tr><td>10</td><td>Mr. S. Kamalesh</td><td>Executive Member</td></tr>
+                        <tr><td>11</td><td>Mr. T. Mohankumar</td><td>Executive Member</td></tr>
+                        <tr><td>12</td><td>Mr. S. Kishore Kumar</td><td>Executive Member</td></tr>
+                        <tr><td>13</td><td>Mr. S. Srisugesh</td><td>Executive Member</td></tr>
+                        <tr><td>14</td><td>Ms. V. Swetha</td><td>Executive Member</td></tr>
+                        <tr><td>15</td><td>Mr. K. Balakumaran</td><td>Executive Member</td></tr>
+                        <tr><td>16</td><td>Mr. S. Pradeepkumar</td><td>Executive Member</td></tr>
+                    </table>
+
+                </div>
+                <div id="menu4" class="tab-pane fade">
+                    <h1>
+                        Duties Of The Office Bearers
+                        </h1>
+                        <strong>
+                            PRESIDENT
+                            </strong>
+
+                    <p>The president shall have the general and direct control of the affairs of the association by the provision thereof. The president shall preside over the meetings of the executive committee and general body.</p>
+                    <strong>VICE PRESIDENT</strong>
+                    <p>In the absence of the president, the vice president shall preside over the meetings of the executive committee and general body. In the absence of both the office bearers, any other member of the executive committee may be proposed to preside over.</p>
+                    <strong>SECRETARY</strong>
+                    <ul>
+                        <li>The secretary shall be the executive officer of the association.
+                        </li>
+                        <li>He shall, in consultation with the president and the principal of the college, arrange for the meeting of the association.</li>
+                        <li>He should carry out all the correspondence on behalf of the society.</li>
+                        <li>He shall prepare circulars for meetings, with the information on the agenda and other information on preparation.</li>
+                        <li>The minutes of the general body meetings and the executive committee meetings shall be recorded by the secretary.</li>
+                        <li>Whenever the President is not available, the Secretary will discuss with the Vice President and can arrange for a meeting giving prior information suitably.</li>
+                        <li>The Secretary shall maintain all the Minute Books, other registers and records and protect them in his custody at the office.</li>
+                        <li>For the improvement of the society and the benefits of the administrations, whatever actions are needed, may be taken by the Secretary with the consent of the President and the executive committee.</li>
+                    </ul>
+                    <strong>ASSOCIATION ACCOUNTS</strong>
+                    <p>The funds of the Association will be deposited in any nationalized bank / scheduled Bank, and be operated jointly by the President and the Patron on behalf of “GIT Alumni Association Network” (Global Institute of Engineering and Technology). An auditor duly appointed by the general body shall audit the accounts of the association annually.</p>
+
+
+
+
+                </div>
+                
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="./images/logo-redesign-2x-300x77.png" alt="global logo" width="200" height="60">
+                <p>257/1, Bangalore, Bengaluru - Chennai Hwy,<br> Melvisharam, Tamil Nadu 632509</p>
+                <p>📞094431 32622</p>
+                <p>📧info@getedu.in</p>
+            </div>
+            <div class="col-md-3">
+                <h2>QUICK LINKS</h2>
+
+                <li><a href="#">About GIT</a></li>
+                <li><a href="#">Placement</a></li>
+                <li><a href="#">Department</a></li>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Academic Calendar</a></li>
+                <li><a href="#">Research</a></li>
+
+            </div>
+            <div class="col-md-3">
+                <h2>OTHER LINKS</h2>
+                <li><a href="#">NAAC</a></li>
+                <li><a href="#">NIRF</a></li>
+                <li><a href="#">Grievance Redressal Committee</a></li>
+            </div>
+            <div class="col-md-3">
+                <h2>QUICK LINK</h2>
+                <li><a href="#">Admission</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">AU-CAI-GIT Facilities</a></li>
+                <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_logo">
+            <a href="https://www.facebook.com/GLOBALIET/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="#0000ff"
+                        d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z">
+                </svg>
+            </a>
+
+
+
+            <a href="https://www.youtube.com/@HIGLOBAL-h9n">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="#ff0000"
+                        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                </svg>
+
+            </a>
+            <a href="https://www.instagram.com/giet_officials/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="#fd0234"
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg>
+            </a>
+            <a href="https://twitter.com/GLOBALIET">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
